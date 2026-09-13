@@ -217,6 +217,46 @@
   }
   .status-pill.show{ opacity: 1; transform: translateX(-50%) translateY(0); }
 
+  .celebrate-overlay{
+    position: fixed; inset: 0; z-index: 1000;
+    background: rgba(10,12,26,0.72);
+    backdrop-filter: blur(3px);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.35s ease;
+    padding: 24px;
+  }
+  .celebrate-overlay.show{ opacity: 1; pointer-events: auto; }
+
+  .celebrate-card{
+    background: linear-gradient(160deg, #2A2F5A, #1B2144);
+    border: 1.5px solid var(--gold);
+    border-radius: 22px;
+    padding: 44px 36px 36px;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(217,174,85,0.35), 0 20px 60px rgba(0,0,0,0.5);
+    transform: scale(0.85) translateY(10px);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .celebrate-overlay.show .celebrate-card{ transform: scale(1) translateY(0); }
+
+  .celebrate-icon{ font-size: 52px; margin-bottom: 18px; filter: drop-shadow(0 0 18px rgba(217,174,85,0.6)); }
+  .celebrate-title{
+    font-family: 'Noto Serif KR', serif; font-weight: 900; font-size: 26px;
+    color: var(--gold-soft); margin-bottom: 14px; letter-spacing: -0.01em;
+  }
+  .celebrate-sub{
+    font-family: 'Noto Serif KR', serif; font-size: 16px; line-height: 1.7;
+    color: var(--text); margin-bottom: 20px;
+  }
+  .celebrate-progress{
+    font-size: 13px; color: var(--text-faint); border-top: 1px dashed var(--line);
+    padding-top: 16px;
+  }
+  .celebrate-progress b{ color: var(--gold-soft); }
+
   @media (max-width: 480px){
     .day-row{ grid-template-columns: 38px 62px 1fr; }
   }
@@ -261,6 +301,15 @@
 </div>
 
 <div class="status-pill" id="statusPill">저장됨</div>
+
+<div class="celebrate-overlay" id="celebrateOverlay">
+  <div class="celebrate-card">
+    <div class="celebrate-icon">🙏</div>
+    <div class="celebrate-title" id="celebrateTitle">응답하심을 감사합니다</div>
+    <div class="celebrate-sub" id="celebrateSub"></div>
+    <div class="celebrate-progress" id="celebrateProgress"></div>
+  </div>
+</div>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
@@ -329,12 +378,48 @@ function getEntry(day){
   return state[day];
 }
 
+const ENCOURAGEMENTS = [
+  "성도님의 기도가 하늘 보좌에 상달되었습니다.",
+  "한 사람의 기도가 마흔 밤을 잇는 힘이 됩니다.",
+  "오늘도 믿음으로 한 걸음 나아가셨습니다.",
+  "주님이 예비하신 처소, 함께 기다립니다.",
+  "이 기도가 결코 헛되지 않을 줄 믿습니다.",
+  "포기하지 않는 기도가 반드시 응답됩니다.",
+  "성도님의 헌신이 공동체를 세워갑니다.",
+];
+
+function showCelebration(dayNum){
+  const overlay = document.getElementById('celebrateOverlay');
+  const sub = document.getElementById('celebrateSub');
+  const progress = document.getElementById('celebrateProgress');
+
+  const total = DATA.days.length;
+  const done = DATA.days.filter(d => state[d.day] && state[d.day].checked).length;
+  const msg = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
+
+  sub.textContent = msg;
+  progress.innerHTML = `<b>${dayNum}일째</b> 기도 · 지금까지 <b>${done}</b> / ${total}일 함께했습니다`;
+
+  overlay.classList.add('show');
+  clearTimeout(showCelebration._t);
+  showCelebration._t = setTimeout(() => overlay.classList.remove('show'), 2600);
+}
+
+document.getElementById('celebrateOverlay').addEventListener('click', () => {
+  document.getElementById('celebrateOverlay').classList.remove('show');
+});
+
 function toggleCheck(day){
   const e = getEntry(day);
   e.checked = !e.checked;
   render();
   clearTimeout(saveTimer);
-  saveState(e.checked ? "응답하심을 감사합니다 🙏" : "체크가 해제되었습니다");
+  if(e.checked){
+    showCelebration(day);
+    saveState();
+  } else {
+    saveState("체크가 해제되었습니다");
+  }
 }
 
 function updateProgress(){
