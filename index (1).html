@@ -1,0 +1,431 @@
+<title>얼바인 열린교회 · 40일 예배처소 작정 릴레이 기도</title>
+<meta name="description" content="얼바인 열린교회 성도님들이 함께 드리는 40일 릴레이 기도 (2026.9.14~10.23)">
+<meta property="og:title" content="얼바인 열린교회 · 40일 릴레이 기도">
+<meta property="og:description" content="성도님들이 함께 드리는 40일 예배처소 작정 릴레이 기도">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #161B2E;
+    --bg-soft: #1E2540;
+    --bg-card: #232B4A;
+    --line: #3A4370;
+    --gold: #D9AE55;
+    --gold-soft: #E8CD8A;
+    --text: #F1ECDD;
+    --text-dim: #A6ADCB;
+    --text-faint: #6C7396;
+    --danger: #C97A6D;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background: radial-gradient(ellipse at top, #1C2340 0%, var(--bg) 55%, #12162A 100%);
+    color: var(--text);
+    font-family: 'Noto Sans KR', sans-serif;
+    min-height: 100vh;
+    padding: 40px 16px 80px;
+  }
+  .wrap{ max-width: 760px; margin: 0 auto; }
+
+  .hero{ text-align:center; margin-bottom: 28px; }
+  .hero .kicker{
+    font-size: 13px; letter-spacing: 0.14em; color: var(--gold-soft);
+    margin-bottom: 10px; font-weight: 500;
+  }
+  .hero h1{
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+    font-size: clamp(24px, 5vw, 34px);
+    margin: 0 0 10px;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .hero p{
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .progress-shell{
+    margin: 26px 0 6px;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  .progress-fill{
+    height: 100%;
+    background: linear-gradient(90deg, #8E6E2A, var(--gold) 55%, var(--gold-soft));
+    width: 0%;
+    transition: width 0.5s ease;
+  }
+  .progress-label{
+    text-align:center; font-size: 13px; color: var(--text-dim); margin: 10px 0 30px;
+    font-variant-numeric: tabular-nums;
+  }
+  .progress-label b{ color: var(--gold-soft); font-weight: 700; }
+
+  .prayer-section{ margin-bottom: 38px; }
+  .prayer-section .label{
+    font-size: 12px; letter-spacing: 0.12em; color: var(--gold-soft);
+    margin-bottom: 16px; font-weight: 500; text-align:center;
+  }
+  .prayer-item{ margin-bottom: 20px; }
+  .prayer-item .num{
+    font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 14.5px;
+    color: var(--text); margin-bottom: 6px;
+  }
+  .prayer-item .quote{
+    font-family: 'Noto Serif KR', serif;
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--text-dim);
+    padding-left: 14px;
+    border-left: 2px solid var(--gold);
+  }
+
+  .week-header{
+    font-family: 'Noto Serif KR', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gold-soft);
+    margin: 38px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .today-hero{
+    background: linear-gradient(160deg, #2A2F5A, #1E2444);
+    border: 1.5px solid var(--gold);
+    border-radius: 18px;
+    padding: 26px 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 40px rgba(217,174,85,0.15);
+  }
+  .today-hero .badge{
+    display:inline-block; background: var(--gold); color:#1A1200; font-weight:700;
+    font-size: 12px; padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; letter-spacing:0.05em;
+  }
+  .today-hero .th-day{
+    font-family:'Noto Serif KR', serif; font-weight:900; font-size: 34px; color: var(--text); margin-bottom: 4px;
+  }
+  .today-hero .th-date{ font-size: 13px; color: var(--text-dim); margin-bottom: 16px; }
+  .today-hero .th-verse{
+    font-family:'Noto Serif KR', serif; font-size: 17px; line-height: 1.8; color: var(--text);
+    background: rgba(0,0,0,0.18); border-radius: 12px; padding: 16px 18px; margin-bottom: 18px;
+  }
+  .today-hero .th-verse .ref{ color: var(--gold-soft); font-weight:700; margin-right:6px; }
+  .th-name-label{
+    font-size: 12px; letter-spacing: 0.12em; color: var(--text-faint); margin-bottom: 6px; font-weight:500;
+  }
+  .th-name-big{
+    font-family: 'Noto Serif KR', serif; font-weight: 900; font-size: 32px; color: var(--gold-soft);
+    margin-bottom: 18px; letter-spacing: -0.01em;
+  }
+  .th-next{
+    margin-top: 14px; font-size: 13px; color: var(--text-faint); text-align:center;
+    border-top: 1px dashed var(--line); padding-top: 12px;
+  }
+  .th-next b{ color: var(--gold-soft); }
+
+  .th-check-btn{
+    width:100%; padding: 16px; border-radius: 12px; border: 1.5px solid var(--gold);
+    background: transparent; color: var(--gold-soft); font-size: 16px; font-weight: 700;
+    cursor:pointer; transition: all 0.2s ease; font-family:'Noto Sans KR',sans-serif;
+  }
+  .th-check-btn.checked{
+    background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+    color:#1A1200; box-shadow: 0 0 24px rgba(217,174,85,0.5);
+  }
+  .no-today{ text-align:center; color: var(--text-dim); font-size: 14px; padding: 10px 0; }
+
+  .list-label{
+    font-size: 13px; color: var(--text-faint); text-align:center; margin: 6px 0 4px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  .day-name{ font-size: 15px; color: var(--gold-soft); font-weight: 700; margin-top: 6px; }
+  .day-name-label{
+    font-size: 11px; color: var(--text-faint); font-weight: 500; background: rgba(255,255,255,0.06);
+    padding: 2px 7px; border-radius: 999px; margin-right: 6px;
+  }
+
+  .day-row{
+    display: grid;
+    grid-template-columns: 44px 76px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 14px 10px;
+    border-bottom: 1px solid rgba(58,67,112,0.5);
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  .day-row.done{
+    background: linear-gradient(90deg, rgba(217,174,85,0.08), transparent 60%);
+  }
+  .day-row.done::before{
+    content:"";
+    position:absolute; left:0; top:0; bottom:0; width:3px;
+    background: var(--gold);
+    border-radius: 2px;
+  }
+
+  .day-check{
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid var(--text-faint);
+    background: transparent;
+    color: var(--gold-soft);
+    font-size: 15px;
+    cursor: pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition: all 0.2s ease;
+    margin-top: 2px;
+  }
+  .day-check.checked{
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #1A1200;
+    box-shadow: 0 0 14px rgba(217,174,85,0.55);
+  }
+
+  .day-meta{ padding-top: 3px; }
+  .day-num{ font-family:'Noto Serif KR', serif; font-weight:700; font-size: 15px; color: var(--text); }
+  .day-date{ font-size: 12px; color: var(--text-faint); margin-top: 2px; }
+
+  .day-content .verse{
+    font-size: 13.5px; line-height: 1.6; color: var(--text-dim); margin-bottom: 8px;
+  }
+  .day-content .verse .ref{ color: var(--gold-soft); font-weight: 700; margin-right: 5px; }
+
+  .footer-note{
+    text-align:center; color: var(--text-faint); font-size: 12px; margin-top: 40px; line-height:1.8;
+  }
+  .status-pill{
+    position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+    background: var(--bg-card); border: 1px solid var(--line);
+    color: var(--text-dim); font-size: 12px; padding: 8px 16px; border-radius: 999px;
+    opacity: 0; transition: opacity 0.3s ease; pointer-events:none;
+  }
+  .status-pill.show{ opacity: 1; }
+
+  @media (max-width: 480px){
+    .day-row{ grid-template-columns: 38px 62px 1fr; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">얼바인 열린교회</div>
+    <h1>40일 예배처소 작정 릴레이 기도</h1>
+    <p>2026. 9. 14 (월) — 10. 23 (금) · 얼바인 열린교회 성도님들이 마흔 밤을 잇는 기도</p>
+  </div>
+
+  <div class="progress-shell"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-label" id="progressLabel">불러오는 중…</div>
+
+  <div id="todaySection"></div>
+
+  <div class="prayer-section">
+    <div class="label">함께 드리는 기도문</div>
+    <div class="prayer-item">
+      <div class="num">1. 하나님이 예배할 처소를 예비해 주시도록</div>
+      <div class="quote">"하나님, 우리가 우리의 힘으로 장소를 찾는 것이 아니라 하나님께서 예배의 처소를 예비하여 주옵소서."</div>
+    </div>
+    <div class="prayer-item">
+      <div class="num">2. 그 장소가 단순한 건물이 아니라 하나님의 임재를 경험하는 곳이 되도록</div>
+      <div class="quote">"그곳에서 주님을 향한 예배가 여전히 살아있고, 하나님을 만나며, 하나님의 뜻을 경험하게 하옵소서."</div>
+    </div>
+    <div class="prayer-item">
+      <div class="num">3. 그곳을 통해 지역과 사람을 섬기고 주님의 제자를 세우는 교회가 되도록</div>
+      <div class="quote">"우리만을 위한 공간이 아니라 하나님께서 사람을 보내시고, 그들을 품고 섬기며 복음을 전하며 생명을 살리는 주님의 제자들을 세우는 하나님의 집이 되게 하옵소서."</div>
+    </div>
+  </div>
+
+  <div class="list-label">전체 40일 보기</div>
+  <div id="days"></div>
+
+  <div class="footer-note">
+    당번인 날, 새벽이나 저녁 중 편한 시간에 그날의 말씀을 붙들고 기도하신 뒤<br>
+    "응답하심을 감사합니다" 버튼을 눌러 체크해 주세요.<br>
+    이 기록은 함께 기도하는 모든 분들과 실시간으로 공유됩니다.
+  </div>
+</div>
+
+<div class="status-pill" id="statusPill">저장됨</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+const DATA = {"days": [{"day": 1, "date": "9/14 (월)", "ref": "창28:16", "phrase": "여호와께서 과연 여기 계시거늘 내가 알지 못하였도다", "week": 1, "name": "김 훈 장로"}, {"day": 2, "date": "9/15 (화)", "ref": "출25:8", "phrase": "내게 성소를 지으라 내가 그들 중에 거할 것이니라", "week": 1, "name": "박남숙 권사"}, {"day": 3, "date": "9/16 (수)", "ref": "시84:1", "phrase": "만군의 여호와여 주의 장막이 어찌 그리 사랑스러운지요", "week": 1, "name": "허승현 사모"}, {"day": 4, "date": "9/17 (목)", "ref": "시84:10", "phrase": "주의 궁정에서의 한 날이 다른 곳에서의 천 날보다 나은즉", "week": 1, "name": "박순태 장로"}, {"day": 5, "date": "9/18 (금)", "ref": "시122:1", "phrase": "여호와의 집에 올라가자 할 때에 내가 기뻐하였도다", "week": 1, "name": "김은실 권사"}, {"day": 6, "date": "9/19 (토)", "ref": "마18:20", "phrase": "두세 사람이 내 이름으로 모인 곳에는 나도 그들 중에 있느니라", "week": 1, "name": "박남숙 권사"}, {"day": 7, "date": "9/20 (일)", "ref": "시27:4", "phrase": "내가 내 평생에 여호와의 집에 살면서 그의 아름다움을 바라보게 하실 것이라", "week": 1, "name": "김경목 목사"}, {"day": 8, "date": "9/21 (월)", "ref": "시127:1", "phrase": "여호와께서 집을 세우지 아니하시면 세우는 자의 수고가 헛되며", "week": 2, "name": "김훈 장로"}, {"day": 9, "date": "9/22 (화)", "ref": "슥4:6", "phrase": "힘으로 되지 아니하며 능력으로 되지 아니하고 오직 나의 영으로 되느니라", "week": 2, "name": "허승현 사모"}, {"day": 10, "date": "9/23 (수)", "ref": "대상29:14", "phrase": "모든 것이 주께로 말미암았사오니 우리가 받은 것을 주께 드렸을 뿐이니이다", "week": 2, "name": "허승현 사모"}, {"day": 11, "date": "9/24 (목)", "ref": "시90:17", "phrase": "우리 손의 행사를 우리에게 견고하게 하소서", "week": 2, "name": "박순태 장로"}, {"day": 12, "date": "9/25 (금)", "ref": "잠16:3", "phrase": "너의 행사를 여호와께 맡기라 그리하면 경영하는 것이 이루어지리라", "week": 2, "name": "김은실 권사"}, {"day": 13, "date": "9/26 (토)", "ref": "학2:9", "phrase": "이 성전의 나중 영광이 이전 영광보다 크리라", "week": 2, "name": "박남숙 권사"}, {"day": 14, "date": "9/27 (일)", "ref": "느6:16", "phrase": "이는 하나님께로 말미암아 이루어진 것을 앎이니라", "week": 2, "name": "김경목 목사"}, {"day": 15, "date": "9/28 (월)", "ref": "왕상8:28", "phrase": "주의 종의 기도와 간구를 들으시옵소서", "week": 3, "name": "김훈 장로"}, {"day": 16, "date": "9/29 (화)", "ref": "왕상8:29", "phrase": "주의 눈이 주야로 이 성전을 향하여 보옵시며", "week": 3, "name": "김경목 목사"}, {"day": 17, "date": "9/30 (수)", "ref": "사65:24", "phrase": "그들이 부르기 전에 내가 응답하겠고", "week": 3, "name": "허승현 사모"}, {"day": 18, "date": "10/1 (목)", "ref": "마7:7", "phrase": "구하라 그리하면 너희에게 주실 것이요", "week": 3, "name": "박순태 장로"}, {"day": 19, "date": "10/2 (금)", "ref": "막11:24", "phrase": "구하는 것은 받은 줄로 믿으라 그리하면 그대로 되리라", "week": 3, "name": "김은실 권사"}, {"day": 20, "date": "10/3 (토)", "ref": "요일5:14", "phrase": "그의 뜻대로 무엇을 구하면 들으심이라", "week": 3, "name": "유영숙 집사"}, {"day": 21, "date": "10/4 (일)", "ref": "대하7:14", "phrase": "기도하여 내 얼굴을 찾으면 내가 하늘에서 듣고", "week": 3, "name": "김경목 목사"}, {"day": 22, "date": "10/5 (월)", "ref": "빌4:19", "phrase": "나의 하나님이 너희 모든 쓸 것을 채우시리라", "week": 4, "name": "김훈 장로"}, {"day": 23, "date": "10/6 (화)", "ref": "엡3:20", "phrase": "우리가 구하거나 생각하는 모든 것에 더 넘치도록 능히 하실 이", "week": 4, "name": "박남숙 권사"}, {"day": 24, "date": "10/7 (수)", "ref": "시23:1", "phrase": "여호와는 나의 목자시니 내게 부족함이 없으리로다", "week": 4, "name": "김경목 목사"}, {"day": 25, "date": "10/8 (목)", "ref": "시34:15", "phrase": "여호와의 눈은 의인을 향하시고 그 귀는 부르짖음에 기울이시는도다", "week": 4, "name": "박순태 장로"}, {"day": 26, "date": "10/9 (금)", "ref": "사43:19", "phrase": "보라 내가 새 일을 행하리니 이제 나타낼 것이라", "week": 4, "name": "김은실 권사"}, {"day": 27, "date": "10/10 (토)", "ref": "마21:22", "phrase": "무엇이든지 믿고 구하면 다 받으리라", "week": 4, "name": "유영숙 집사"}, {"day": 28, "date": "10/11 (일)", "ref": "요14:13", "phrase": "내 이름으로 무엇을 구하든지 내가 시행하리니", "week": 4, "name": "김경목 목사"}, {"day": 29, "date": "10/12 (월)", "ref": "합2:3", "phrase": "비록 더딜지라도 기다리라 반드시 응하리라", "week": 5, "name": "유관호 집사"}, {"day": 30, "date": "10/13 (화)", "ref": "사40:31", "phrase": "오직 여호와를 앙망하는 자는 새 힘을 얻으리니", "week": 5, "name": "김경목 목사"}, {"day": 31, "date": "10/14 (수)", "ref": "갈6:9", "phrase": "낙심하지 말지니 포기하지 아니하면 때가 이르매 거두리라", "week": 5, "name": "유관호 집사"}, {"day": 32, "date": "10/15 (목)", "ref": "시37:5", "phrase": "네 길을 여호와께 맡기라 그를 의지하면 그가 이루시고", "week": 5, "name": "유영숙 집사"}, {"day": 33, "date": "10/16 (금)", "ref": "렘29:11", "phrase": "너희에게 미래와 희망을 주는 것이니라", "week": 5, "name": "곽희정 권사"}, {"day": 34, "date": "10/17 (토)", "ref": "히11:1", "phrase": "믿음은 바라는 것들의 실상이요 보이지 않는 것들의 증거니", "week": 5, "name": "곽희정 권사"}, {"day": 35, "date": "10/18 (일)", "ref": "시46:1", "phrase": "하나님은 우리의 피난처시요 힘이시니", "week": 5, "name": "김경목 목사"}, {"day": 36, "date": "10/19 (월)", "ref": "느2:20", "phrase": "하늘의 하나님이 우리를 형통하게 하시리니", "week": 6, "name": "곽희정 권사"}, {"day": 37, "date": "10/20 (화)", "ref": "시20:4", "phrase": "네 마음의 소원대로 허락하시고 네 모든 계획을 이루어 주시기를", "week": 6, "name": "곽희정 권사"}, {"day": 38, "date": "10/21 (수)", "ref": "롬8:28", "phrase": "모든 것이 합력하여 선을 이루느니라", "week": 6, "name": "유영숙 집사"}, {"day": 39, "date": "10/22 (목)", "ref": "시118:23", "phrase": "이는 여호와께서 행하신 것이요 우리 눈에 기이한 바로다", "week": 6, "name": "유관호 집사"}, {"day": 40, "date": "10/23 (금)", "ref": "시84:11", "phrase": "정직하게 행하는 자에게 좋은 것을 아끼지 아니하실 것임이니이다", "week": 6, "name": "김경목 목사"}], "weekTitles": {"1": "1주 · 창세기 28장 · 야곱의 벧엘", "2": "2주 · 출애굽기 25장 · 광야 성막 헌물", "3": "3주 · 느헤미야 2-6장 · 성벽 재건", "4": "4주 · 열왕기상 8장 · 솔로몬 성전 봉헌", "5": "5주 · 학개 1장 · 성전 재건 독려", "6": "6주 · 시편 84편 · 주의 궁정을 사모함"}};
+
+// ============================================================
+// Firebase 설정 — 아래 firebaseConfig 값을 본인의 Firebase 프로젝트
+// 설정값으로 교체하세요. (안내 문서의 "1단계" 참고)
+// ============================================================
+const firebaseConfig = {
+  apiKey: "AIzaSyApYd8mZ4Ck9Rnr3NY-0Qx38Bw1TGH7qMA",
+  authDomain: "irvineopenchurch-prayer40.firebaseapp.com",
+  projectId: "irvineopenchurch-prayer40",
+  storageBucket: "irvineopenchurch-prayer40.firebasestorage.app",
+  messagingSenderId: "473126826064",
+  appId: "1:473126826064:web:0ba0ef2b12781e192d6155"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const stateDocRef = db.collection("prayer40").doc("state");
+
+let state = {}; // { [day]: { checked: bool } }
+let saveTimer = null;
+
+function defaultEntry(){ return { checked: false }; }
+
+function loadState(){
+  stateDocRef.onSnapshot((snap) => {
+    state = snap.exists ? (snap.data() || {}) : {};
+    render();
+  }, (err) => {
+    console.error(err);
+    flashStatus("연결 실패 · Firebase 설정을 확인해 주세요");
+    state = {};
+    render();
+  });
+}
+
+function scheduleSave(){
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveState, 350);
+}
+
+async function saveState(){
+  try{
+    await stateDocRef.set(state, { merge: true });
+    flashStatus("저장됨");
+  }catch(e){
+    console.error(e);
+    flashStatus("저장 실패 · 연결을 확인해 주세요");
+  }
+}
+
+function flashStatus(text){
+  const pill = document.getElementById('statusPill');
+  pill.textContent = text;
+  pill.classList.add('show');
+  clearTimeout(flashStatus._t);
+  flashStatus._t = setTimeout(()=> pill.classList.remove('show'), 1400);
+}
+
+function getEntry(day){
+  if(!state[day]) state[day] = defaultEntry();
+  return state[day];
+}
+
+function toggleCheck(day){
+  const e = getEntry(day);
+  e.checked = !e.checked;
+  scheduleSave();
+  render();
+}
+
+function updateProgress(){
+  const total = DATA.days.length;
+  const done = DATA.days.filter(d => state[d.day] && state[d.day].checked).length;
+  const pct = Math.round((done/total)*100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressLabel').innerHTML = `<b>${done}</b> / ${total}일 기도 완료 · ${pct}%`;
+}
+
+function render(){
+  renderToday();
+  const container = document.getElementById('days');
+  container.innerHTML = '';
+  let currentWeek = null;
+
+  DATA.days.forEach(d => {
+    if(d.week !== currentWeek){
+      currentWeek = d.week;
+      const wh = document.createElement('div');
+      wh.className = 'week-header';
+      wh.textContent = DATA.weekTitles[String(currentWeek)];
+      container.appendChild(wh);
+    }
+
+    const entry = getEntry(d.day);
+    const row = document.createElement('div');
+    row.className = 'day-row' + (entry.checked ? ' done' : '');
+
+    row.innerHTML = `
+      <button class="day-check ${entry.checked ? 'checked' : ''}" data-day="${d.day}" aria-label="응답하심을 감사합니다">
+        ${entry.checked ? '✓' : ''}
+      </button>
+      <div class="day-meta">
+        <div class="day-num">${d.day}일</div>
+        <div class="day-date">${d.date}</div>
+      </div>
+      <div class="day-content">
+        <div class="verse"><span class="ref">${d.ref}</span>${d.phrase}</div>
+        <div class="day-name"><span class="day-name-label">담당</span> ${escapeHtml(d.name)}</div>
+      </div>
+    `;
+    container.appendChild(row);
+  });
+
+  container.querySelectorAll('.day-check').forEach(btn=>{
+    btn.addEventListener('click', ()=> toggleCheck(btn.dataset.day));
+  });
+
+  updateProgress();
+}
+
+function escapeHtml(s){
+  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function findTodayIndex(){
+  const now = new Date();
+  const y = now.getFullYear(), m = now.getMonth()+1, dd = now.getDate();
+  return DATA.days.findIndex(d => {
+    const [md] = d.date.split(' ');
+    const [mm, ddNum] = md.split('/').map(Number);
+    return (y === 2026 && mm === m && ddNum === dd);
+  });
+}
+
+function renderToday(){
+  const container = document.getElementById('todaySection');
+  const idx = findTodayIndex();
+
+  if(idx === -1){
+    container.innerHTML = `<div class="today-hero"><div class="no-today">오늘은 40일 기도 기간(9/14~10/23)이 아닙니다.<br>아래에서 날짜를 찾아 확인해 주세요.</div></div>`;
+    return;
+  }
+
+  const today = DATA.days[idx];
+  const tomorrow = DATA.days[idx+1];
+  const entry = getEntry(today.day);
+
+  container.innerHTML = `
+    <div class="today-hero">
+      <div class="badge">오늘의 기도 · ${today.day}일째</div>
+      <div class="th-day">${today.date}</div>
+      <div class="th-verse"><span class="ref">${today.ref}</span>${today.phrase}</div>
+      <div class="th-name-label">오늘의 기도 당번</div>
+      <div class="th-name-big">${escapeHtml(today.name)}</div>
+      <button class="th-check-btn ${entry.checked ? 'checked' : ''}" id="thCheckBtn">
+        ${entry.checked ? '✓ 응답하심을 감사합니다' : '응답하심을 감사합니다 — 체크하기'}
+      </button>
+      ${tomorrow ? `<div class="th-next">다음 주자 바통 터치 → <b>${tomorrow.date}</b> · ${escapeHtml(tomorrow.name)}님</div>` : `<div class="th-next">오늘로 40일 릴레이가 마무리됩니다 🙏</div>`}
+    </div>
+  `;
+
+  document.getElementById('thCheckBtn').addEventListener('click', () => { toggleCheck(today.day); });
+}
+
+loadState();
+</script>
