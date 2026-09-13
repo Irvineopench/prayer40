@@ -32,13 +32,13 @@
 
   .hero{ text-align:center; margin-bottom: 28px; }
   .hero .kicker{
-    font-size: 13px; letter-spacing: 0.14em; color: var(--gold-soft);
-    margin-bottom: 10px; font-weight: 500;
+    font-size: 20px; letter-spacing: 0.1em; color: var(--gold-soft);
+    margin-bottom: 12px; font-weight: 700;
   }
   .hero h1{
     font-family: 'Noto Serif KR', serif;
     font-weight: 700;
-    font-size: clamp(24px, 5vw, 34px);
+    font-size: clamp(19px, 3.6vw, 26px);
     margin: 0 0 10px;
     color: var(--text);
     letter-spacing: -0.01em;
@@ -208,12 +208,14 @@
     text-align:center; color: var(--text-faint); font-size: 12px; margin-top: 40px; line-height:1.8;
   }
   .status-pill{
-    position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
-    background: var(--bg-card); border: 1px solid var(--line);
-    color: var(--text-dim); font-size: 12px; padding: 8px 16px; border-radius: 999px;
-    opacity: 0; transition: opacity 0.3s ease; pointer-events:none;
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(8px);
+    background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+    color: #1A1200; font-size: 14px; font-weight: 700; padding: 12px 22px; border-radius: 999px;
+    box-shadow: 0 6px 24px rgba(217,174,85,0.4);
+    opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; pointer-events:none;
+    white-space: nowrap; z-index: 999;
   }
-  .status-pill.show{ opacity: 1; }
+  .status-pill.show{ opacity: 1; transform: translateX(-50%) translateY(0); }
 
   @media (max-width: 480px){
     .day-row{ grid-template-columns: 38px 62px 1fr; }
@@ -253,7 +255,7 @@
 
   <div class="footer-note">
     당번인 날, 새벽이나 저녁 중 편한 시간에 그날의 말씀을 붙들고 기도하신 뒤<br>
-    "응답하심을 감사합니다" 버튼을 눌러 체크해 주세요.<br>
+    동그라미를 눌러 체크해 주세요 — "응답하심을 감사합니다"<br>
     이 기록은 함께 기도하는 모든 분들과 실시간으로 공유됩니다.
   </div>
 </div>
@@ -301,13 +303,13 @@ function loadState(){
 
 function scheduleSave(){
   clearTimeout(saveTimer);
-  saveTimer = setTimeout(saveState, 350);
+  saveTimer = setTimeout(() => saveState(), 350);
 }
 
-async function saveState(){
+async function saveState(successMsg){
   try{
     await stateDocRef.set(state, { merge: true });
-    flashStatus("저장됨");
+    if(successMsg) flashStatus(successMsg);
   }catch(e){
     console.error(e);
     flashStatus("저장 실패 · 연결을 확인해 주세요");
@@ -319,7 +321,7 @@ function flashStatus(text){
   pill.textContent = text;
   pill.classList.add('show');
   clearTimeout(flashStatus._t);
-  flashStatus._t = setTimeout(()=> pill.classList.remove('show'), 1400);
+  flashStatus._t = setTimeout(()=> pill.classList.remove('show'), 2400);
 }
 
 function getEntry(day){
@@ -330,8 +332,9 @@ function getEntry(day){
 function toggleCheck(day){
   const e = getEntry(day);
   e.checked = !e.checked;
-  scheduleSave();
   render();
+  clearTimeout(saveTimer);
+  saveState(e.checked ? "응답하심을 감사합니다 🙏" : "체크가 해제되었습니다");
 }
 
 function updateProgress(){
@@ -403,7 +406,7 @@ function renderToday(){
   const idx = findTodayIndex();
 
   if(idx === -1){
-    container.innerHTML = `<div class="today-hero"><div class="no-today">오늘은 40일 기도 기간(9/14~10/23)이 아닙니다.<br>아래에서 날짜를 찾아 확인해 주세요.</div></div>`;
+    container.innerHTML = '';
     return;
   }
 
