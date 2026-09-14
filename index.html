@@ -150,10 +150,10 @@
     text-transform: uppercase; letter-spacing: 0.08em;
   }
 
-  .day-name{ font-size: 15px; color: var(--gold-soft); font-weight: 700; margin-top: 6px; }
+  .day-name{ font-size: 18px; color: var(--gold-soft); font-weight: 700; margin-top: 8px; }
   .day-name-label{
-    font-size: 11px; color: var(--text-faint); font-weight: 500; background: rgba(255,255,255,0.06);
-    padding: 2px 7px; border-radius: 999px; margin-right: 6px;
+    font-size: 13px; color: var(--text-faint); font-weight: 500; background: rgba(255,255,255,0.06);
+    padding: 3px 9px; border-radius: 999px; margin-right: 6px;
   }
 
   .goto-today-btn{
@@ -167,7 +167,7 @@
     background: var(--bg-card);
     border: 1px solid var(--line);
     border-radius: 14px;
-    padding: 16px;
+    padding: 18px;
     margin-bottom: 14px;
     transition: box-shadow 0.3s ease;
   }
@@ -209,15 +209,15 @@
     box-shadow: 0 0 14px rgba(217,174,85,0.55);
   }
 
-  .day-num{ font-family:'Noto Serif KR', serif; font-weight:700; font-size: 24px; color: var(--text); }
+  .day-num{ font-family:'Noto Serif KR', serif; font-weight:700; font-size: 28px; color: var(--text); }
   .day-date-chip{
-    background: rgba(255,255,255,0.1); color: #ffffff; font-size: 18px; font-weight: 700;
-    padding: 5px 14px; border-radius: 10px;
+    background: rgba(255,255,255,0.1); color: #ffffff; font-size: 20px; font-weight: 700;
+    padding: 6px 16px; border-radius: 10px;
   }
   .day-row.today .day-date-chip{ background: rgba(217,174,85,0.25); }
 
   .day-content .verse{
-    font-size: 17px; line-height: 1.6; color: var(--text-dim); margin-bottom: 10px;
+    font-size: 19px; line-height: 1.65; color: var(--text-dim); margin-bottom: 10px;
   }
   .day-row.today .day-content .verse{ color: var(--text); }
   .day-content .verse .ref{ color: var(--gold-soft); font-weight: 700; margin-right: 5px; }
@@ -276,8 +276,10 @@
   .celebrate-progress b{ color: var(--gold-soft); }
 
   @media (max-width: 480px){
-    .day-num{ font-size: 21px; }
-    .day-date-chip{ font-size: 16px; padding: 4px 11px; }
+    .day-num{ font-size: 25px; }
+    .day-date-chip{ font-size: 18px; padding: 5px 13px; }
+    .day-content .verse{ font-size: 18px; }
+    .day-name{ font-size: 17px; }
   }
 </style>
 
