@@ -150,10 +150,10 @@
     text-transform: uppercase; letter-spacing: 0.08em;
   }
 
-  .day-name{ font-size: 18px; color: var(--gold-soft); font-weight: 700; margin-top: 8px; }
+  .day-name{ font-size: 23px; color: var(--gold-soft); font-weight: 700; margin-top: 8px; }
   .day-name-label{
-    font-size: 13px; color: var(--text-faint); font-weight: 500; background: rgba(255,255,255,0.06);
-    padding: 3px 9px; border-radius: 999px; margin-right: 6px;
+    font-size: 18px; color: var(--text-faint); font-weight: 500; background: rgba(255,255,255,0.06);
+    padding: 4px 12px; border-radius: 999px; margin-right: 8px;
   }
 
   .goto-today-btn{
@@ -188,7 +188,7 @@
     padding: 4px 12px; border-radius: 999px; margin-bottom: 10px;
   }
 
-  .day-row-top{ display:flex; align-items:center; gap: 12px; margin-bottom: 12px; }
+  .day-row-top{ display:flex; align-items:center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
 
   .day-check{
     width: 34px; height: 34px;
@@ -211,16 +211,16 @@
 
   .day-num{ font-family:'Noto Serif KR', serif; font-weight:700; font-size: 28px; color: var(--text); }
   .day-date-chip{
-    background: rgba(255,255,255,0.1); color: #ffffff; font-size: 20px; font-weight: 700;
-    padding: 6px 16px; border-radius: 10px;
+    background: rgba(255,255,255,0.1); color: #ffffff; font-size: 25px; font-weight: 700;
+    padding: 6px 18px; border-radius: 10px;
   }
   .day-row.today .day-date-chip{ background: rgba(217,174,85,0.25); }
 
   .day-content .verse{
-    font-size: 19px; line-height: 1.65; color: var(--text-dim); margin-bottom: 10px;
+    font-size: 23px; line-height: 1.6; color: var(--text-dim); margin-bottom: 12px;
   }
   .day-row.today .day-content .verse{ color: var(--text); }
-  .day-content .verse .ref{ color: var(--gold-soft); font-weight: 700; margin-right: 5px; }
+  .day-content .verse .ref{ color: var(--gold-soft); font-weight: 700; margin-right: 6px; }
 
   .footer-note{
     text-align:center; color: var(--text-faint); font-size: 12px; margin-top: 40px; line-height:1.8;
@@ -276,10 +276,11 @@
   .celebrate-progress b{ color: var(--gold-soft); }
 
   @media (max-width: 480px){
-    .day-num{ font-size: 25px; }
-    .day-date-chip{ font-size: 18px; padding: 5px 13px; }
-    .day-content .verse{ font-size: 18px; }
-    .day-name{ font-size: 17px; }
+    .day-num{ font-size: 26px; }
+    .day-date-chip{ font-size: 21px; padding: 5px 14px; }
+    .day-content .verse{ font-size: 20px; }
+    .day-name{ font-size: 20px; }
+    .day-name-label{ font-size: 16px; }
   }
 </style>
 
